@@ -1,0 +1,14 @@
+{
+  "name": "gravitation-project",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+      "start": "electron . --no-sandbox"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "electron": "^36.2.0"
+  }
+}

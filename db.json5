@@ -1,0 +1,10 @@
+{
+  users: [
+    { id: "1", username: "admin", password: "Admin1" },
+    { id: "2", username: "defuser", password: "Defuser2" },
+  ],
+
+  profile: {
+    name: "typicode",
+  },
+}

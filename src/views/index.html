@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="../singInValidation.js" type="module" defer></script>
+    <title>Gravitation</title>
+</head>
+  <body>
+    <main>
+      <section>
+        <form id="singinForm" action="../pages/main.html" method="post" data-js-singin>
+          <p class="field">
+            <label class="field__label" for="login">Username or email address</label>
+            <input
+            class="field__control" 
+            id="login" 
+            name="login" 
+            minlength="2"
+            maxlength="16"
+            aria-errormessage="login-errors"
+            required/>
+
+            <span class="field__errors" id="login-errors" data-js-singin-field-errors></span>
+          </p>
+          <p class="field">
+            <label class="field__label" for="password">Password</label>
+            <input 
+            class="field__control" 
+            id="password" 
+            name="password" 
+            type="password" 
+            minlength="4"
+            maxlength="16"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,16}"
+            title="Пароль должен содержать хотя бы 1 заглавную и 1 строчную букву, a также хотя бы 1 цифру."
+            aria-errormessage="password-errors"
+            required/>
+
+            <span class="field__errors" id="password-errors" data-js-singin-field-errors></span>
+          </p>
+
+          <button class="singin_button" type="submit">Sing-in</button>
+
+        </form>
+
+        <form class="singup_form" id="regForm" action="/registration" method="post" data-js-regForm>
+            <p4>No account?</p4>
+            <button class="singup_button" type="submit">Sing-up</button>
+        </form>
+      
+      </section>
+  </body>
+</html>

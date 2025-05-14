@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Проект</h1>
+    </header>
+    
+    <nav class="tabs">
+        <button data-page="about" class="tab active">О проекте</button>
+        <button data-page="list" class="tab">Список задач</button>
+        <button data-page="board" class="tab">Доска задач</button>
+    </nav>
+    
+    <div class="controls">
+        <div class="search-box">
+            <input type="text" placeholder="Поиск задач">
+        </div>
+        <div class="sort-box">
+            <select>
+                <option>Сортировка</option>
+                <option>По дате</option>
+                <option>По приоритету</option>
+            </select>
+        </div>
+    </div>
+    
+    <main id="content" class="content">
+        <!-- Контент будет загружаться здесь -->
+    </main>
+    
+    <script src="../renderer.js"></script>
+</body>
+</html>

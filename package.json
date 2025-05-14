@@ -1,14 +1,55 @@
 {
-  "name": "gravitation-project",
+  "name": "task-board-app",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "description": "Electron Task Board Application",
+  "main": "src/main.js",
   "scripts": {
-      "start": "electron . --no-sandbox"
+    "start": "electron . --enable-logging",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "clean-install": "rm -rf node_modules package-lock.json && npm install",
+    "lint": "eslint src"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "electron",
+    "task",
+    "board"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
-    "electron": "^36.2.0"
+    "electron": "^28.0.0",
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.56.0"
+  },
+  "build": {
+    "appId": "com.example.taskboard",
+    "productName": "Task Board",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "styles/**/*",
+      "views/**/*",
+      "pages/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
   }
 }
